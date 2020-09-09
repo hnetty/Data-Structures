@@ -15,6 +15,7 @@ from singly_linked_list import LinkedList
 class Stack:
     def __init__(self):
         self.size = 0
+        self.storage = LinkedList()
         # self.storage = ?
 
     def __len__(self):
@@ -28,4 +29,4 @@ class Stack:
         if self.size == 0:
             return None
         self.size -= 1
-        return self.storage.remove_tail(1)
+        return self.storage.remove_tail()
